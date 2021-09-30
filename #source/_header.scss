@@ -1,0 +1,201 @@
+.header {
+
+
+    position: relative;
+    left: 0;
+    top: 0;
+
+    height: 56px;
+    z-index: 3;
+    @media (max-width: $mobile-width-only) {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+
+    }
+}
+
+.menu__hidden {
+    opacity: 0;
+}
+
+.nav {
+    position: static;
+    @media (max-width: $mobile-width-only) {
+        position: relative;
+    }
+    &__button {
+        @media (max-width: $mobile-width-only) {
+
+
+            width: 23px;
+            height: 24px;
+            border: 0;
+            background-color: transparent;
+            position: absolute;
+            top: 16px;
+            left: 120px;
+            z-index: 1000;
+
+            &--closed{
+            &::before {
+              position: absolute;
+              content: "";
+              width: 23px;
+              height: 4px;
+              background-color: #81B3D2;
+              box-shadow: 0 10px 0 0 #81B3D2, 0 20px 0 0 #81B3D2;
+              z-index: 1000;
+              top: 0;
+              left: 0;
+            }
+
+
+              &:focus::before,
+              &:hover::before {
+                background-color: #81B3D2;
+                box-shadow: 0 10px 0 0 #81B3D2, 0 20px 0 0 #81B3D2;
+              }
+            }
+
+            &--opened{
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                width: 23px;
+                height: 3px;
+                border-radius: 5px;
+                background-color: #ffffff;
+                top: 10px;
+                right: 0px;
+                z-index: 21;
+                }
+
+                &::before {
+                  transform: rotate(45deg);
+                }
+
+                &::after {
+                  transform: rotate(-45deg);
+                }
+
+                &:focus::before,
+                &:focus::after,
+                &:hover::after,
+                &:hover::before {
+                  background-color: #ffffff;
+                }
+            }
+        }
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
+
+    }
+
+
+
+
+    &__burger {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media (max-width: $mobile-width-only) {
+
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: -160px;
+            z-index: 15;
+
+        }
+        &--closed {
+            @media (max-width: $mobile-width-only) {
+                display: none;
+            }
+        }
+
+        &--opened {
+            @media (max-width: $mobile-width-only) {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                right: -160px;
+                z-index: 15;
+
+            }
+        }
+
+    }
+
+
+    &__item:nth-child(2) {
+        padding-right: 78px;
+        @media (max-width: $mobile-width-only) {
+            padding-right: 0;
+        }
+      }
+
+    &__item:nth-child(3) {
+        padding-left: 78px;
+        @media (max-width: $mobile-width-only) {
+            padding-left: 0;
+        }
+      }
+
+    &__variant {
+        display: block;
+        height: 56px;
+        width: 153px;
+        text-align: center;
+
+        font-weight: 700;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #000;
+
+        align-items: center;
+        padding: 16px 0 14px 0;
+        @media (max-width: $mobile-width-only) {
+            width: 320px;
+            height: 55px;
+            background: #81B3D2;
+            color: white;
+            box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+        }
+        &:hover,
+        &:focus {
+            color: #81B3D2;
+        }
+        &:active {
+            opacity: 0.3;
+        }
+        &--current {
+            color: #766357;
+            &:hover,
+            &:focus {
+                color: #604E43;
+            }
+            &:active {
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+.nav__variant--opened {
+    color: #766357;
+}

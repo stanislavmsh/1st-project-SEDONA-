@@ -1,0 +1,70 @@
+.info__second {
+    @media (min-width: $tablet-width) {
+        position: relative;
+    }
+}
+
+.town__second {
+    @media (min-width: $tablet-width) {
+        width: $tablet-width;
+    }
+
+    @media (min-width: $desktop-width) {
+
+        width: $desktop-width;
+    }
+}
+
+.block__second {
+
+    @media (min-width: $tablet-width) {
+        position: absolute;
+        left: 512px;
+        top: 0;
+        z-index: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+        left: 800px;
+        top: 0;
+    }
+
+}
+
+.title__second {
+    @media (max-width: $mobile-width-only) {
+        br {
+            display: none;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        margin: 0 35px 0;
+    }
+
+}
+
+.photo__second  {
+    height: 260px;
+    width: 100%;
+    background-image: url('../img/main-bridge-mobile@1x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 512px;
+        background-image: url('../img/main-bridge-tablet@1x.jpg');
+        background-size: cover;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 800px;
+        background-image: url('../img/main-bridge-desktop@1x.jpg');
+        background-size: cover;
+    }
+}
+

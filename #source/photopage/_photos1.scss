@@ -1,0 +1,125 @@
+
+.pictures {
+      @media (min-width:$tablet-width) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 480px 347px 347px;
+            grid-template-areas:
+            "sunset sunset"
+            "cactus roads"
+            "bridge .";
+            padding: 0 60px;
+      }
+      @media (min-width:$desktop-width) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 400px 267px;
+            grid-template-areas:
+            "sunset sunset sunset"
+            "cactus roads bridge";
+            padding: 0;
+      }
+
+      &__wrapper {
+      @media (min-width: $tablet-width) {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-template-rows: max-content max-content;
+            grid-template-areas:
+                  "title like"
+                  "author like";
+            justify-content: space-between;
+            padding: 0 20px;
+            }
+      @media (min-width: $desktop-width) {
+            color: #fff;
+            transform: translateY(-100%);
+            background-color: #00000030;
+      }
+      }
+
+      &__container {
+      padding: 20px;
+      border-bottom: 1px solid #e5e5e5;
+      line-height: 24px;
+      padding-bottom: 15px;
+      padding-top: 22px;
+      @media (min-width:$tablet-width) {
+            padding: 0;
+            border: none;
+            background-color: #F2F2F2;
+      }
+      &--sunset {
+            grid-area: sunset;
+      }
+
+      &--cactus {
+            grid-area: cactus;
+            @media (min-width:$tablet-width) {
+            }
+      }
+
+      &--roads {
+            grid-area: roads;
+            @media (min-width:$tablet-width) {
+                  background-color: #e5e5e5;
+            }
+      }
+
+      &--bridge {
+            grid-area: bridge;
+            @media (min-width:$tablet-width) {
+            }
+      }
+      }
+
+      &__title {
+      grid-area: title;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-top: 10px;
+      padding-bottom: 3px;
+      @media (min-width:$tablet-width){
+            padding-top: 14.5px;
+      }
+
+      }
+
+      &__author {
+      grid-area: author;
+      font-weight: 400;
+      color: #333;
+      padding-bottom: 10px;
+      @media (min-width:$tablet-width){
+            padding-bottom: 14.5px;
+      }
+      @media (min-width:$desktop-width){
+            color:#fff;
+      }
+      }
+
+
+      &__like {
+      grid-area: like;
+      font-size: 14px;
+      background-color: transparent;
+            & span {
+            font-weight: 700;
+            padding-left: 14px;
+            @media (min-width:$tablet-width){
+                  padding-left: 9px;
+            }
+            @media (min-width:$desktop-width){
+                  color:#fff;
+            }
+            }
+            & svg {
+                  opacity: 0.3;
+            @media (min-width:$desktop-width){
+                  opacity: 1;
+                  fill: #fff;
+            }
+            }
+
+      }
+}
+

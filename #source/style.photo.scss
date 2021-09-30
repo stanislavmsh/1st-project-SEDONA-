@@ -1,0 +1,46 @@
+// Файл обнуляющих стилей
+@import "_nullstyle";
+
+// Vars
+@import "_vars";
+
+// Шрифты
+@import "_fonts";
+
+// Visually hidden
+@import "_vhidden";
+
+// Header
+@import "_header";
+
+body {
+    font-family: "PT Sans", sans-serif;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      max-width: 768px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1200px;
+    }
+}
+
+picture {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@import "./photopage/mainpage";
+
+@import "./photopage/photos1";
+
+@import "./photopage/watch";
+
+@import "./photopage/footer";
+

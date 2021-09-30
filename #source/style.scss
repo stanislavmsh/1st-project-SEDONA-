@@ -1,0 +1,77 @@
+// Файл обнуляющих стилей
+@import "_nullstyle";
+
+// Visually hidden
+@import "_vhidden";
+
+// Шрифты
+@import "_fonts";
+
+// Vars
+@import "_vars";
+
+body {
+    font-family: "PT Sans", sans-serif;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      max-width: 768px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1200px;
+    }
+}
+
+// Header
+@import "_header";
+
+// Mainpage
+@import "mainpage/mainpage";
+
+// Info 1
+@import "mainpage/_info1";
+
+// Tips 1
+@import "mainpage/_tips1";
+
+// Info 2
+@import "mainpage/_info2";
+
+// Tips 2
+@import "mainpage/_tips2";
+
+// Interest
+@import "mainpage/_interest";
+
+// Map + Footer
+@import "mainpage/_mapfooter";
+
+// Button
+.button {
+  background-color: #81b3d2;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  padding: 0 32px;
+
+  &:focus,
+  &:hover {
+    background-color: #669EC0;
+  }
+
+  &:active {
+    background-color: #5496BD;
+    color: #ffffff30;
+  }
+
+  &-index {
+    padding-top: 14.5px;
+    padding-bottom: 17.5px;
+  }
+}

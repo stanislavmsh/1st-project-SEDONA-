@@ -1,0 +1,102 @@
+.intro__logo {
+    background-image:url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+    display: flex;
+    justify-content: center;
+    background-position:bottom, bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    @media (min-width: $tablet-width) {
+        background-image:url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+        background-size: bottom, bottom;
+        @media (min-resolution: 2dppx) {
+            background-image:url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
+        }
+    }
+    @media (min-width: $desktop-width) {
+        background-size: contain, cover;
+        background-image:url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+    }
+}
+
+.intro__img {
+    width: 229px;
+    height: 39px;
+    padding-top: 50px;
+    padding-bottom: 65px;
+
+    box-sizing: content-box;
+    @media (min-width: $tablet-width) {
+        width: 456.9px;
+        height: 77.6px;
+
+        padding-top: 75px;
+        padding-bottom: 115px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 459px;
+        height: 79px;
+
+        padding-top: 102px;
+        padding-bottom: 120px;
+    }
+
+
+}
+
+.intro {
+    &__description {
+        text-transform: uppercase;
+        line-height: 26px;
+        text-align: center;
+
+        margin-top: 36px;
+        padding-bottom: 16px;
+
+        border-bottom: 1px solid #E5E5E5;
+
+        @media (min-width: $tablet-width) {
+            margin-top: 70px;
+            padding-bottom: 80px;
+            border-bottom: none;
+        }
+        @media (min-width: $desktop-width) {
+            margin-top: 114px;
+            padding-bottom: 60px;
+        }
+
+
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        box-sizing: border-box;
+        width: 285px;
+        @media (min-width: $tablet-width) {
+            width: 435px;
+            font-size: 30px;
+        }
+
+
+    }
+
+    &__text {
+        margin: 0 auto;
+        width: 285px;
+        font-size: 14px;
+        color: #333;
+        @media (max-width: $mobile-width-only) {
+            br {
+                display: none;
+            }
+        }
+        @media (min-width: $tablet-width) {
+            width: 520px;
+        }
+    }
+}
+

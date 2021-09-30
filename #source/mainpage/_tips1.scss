@@ -1,0 +1,153 @@
+.tips {
+    padding: 35px 0;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        padding: 0;
+    }
+
+
+    &__item {
+        text-align: left;
+        text-transform: uppercase;
+        padding-bottom: 26px;
+        padding-left: 69px;
+        padding-right: 11px;
+
+        position: relative;
+
+        @media (min-width: $tablet-width) {
+            text-align: center;
+            padding: 158px 21px 60px;
+        }
+        @media (min-width: $desktop-width) {
+            text-align: center;
+            padding: 158px 21px 60px;
+            width: 400px;
+        }
+    }
+    &__item:last-child {
+        padding-bottom: 0;
+        @media (min-width: $tablet-width) {
+            padding-bottom: 60px;
+        }
+    }
+}
+.item {
+
+    &__title {
+
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        padding-bottom: 25px;
+        @media (min-width: $tablet-width) {
+            font-size: 21px;
+            padding-bottom: 23px;
+        }
+    }
+
+    &__house {
+        @media (min-width: $tablet-width) {
+            order: 1;
+
+        }
+    }
+
+    &__house::before {
+        content: url("../img/icon-house.svg");
+        position: absolute;
+        width: 39px;
+        height: 37px;
+        top: 0;
+        left: 21px;
+        transform: translateY(-25%);
+        @media (min-width: $tablet-width) {
+            left: 0;
+            width: 75px;
+            height: 72px;
+            transform: translate3d(145%, 75%, 0);
+        }
+        @media (min-width: $desktop-width) {
+            left: 0;
+            width: 75px;
+            height: 72px;
+            transform: translate3d(217%, 75%, 0);
+        }
+    }
+
+    &__burger {
+        @media (max-width: $mobile-width-only){
+            br {
+                display: none;
+            }
+        }
+
+        @media (min-width: $tablet-width) {
+            order: 2;
+            padding: 158px 21px 60px;
+
+        }
+    }
+
+    &__burger::before {
+        content: url("../img/icon-burger.svg");
+        position: absolute;
+
+        width: 40px;
+        height: 35px;
+
+        top: 0;
+        left: 19px;
+        transform: translateY(-25%);
+        @media (min-width: $tablet-width) {
+            left: 0;
+            width: 76px;
+            height: 68px;
+            transform: translate3d(90%, 84%, 0);
+        }
+        @media (min-width: $desktop-width) {
+            left: 0;
+            width: 76px;
+            height: 68px;
+            transform: translate3d(214%, 84%, 0);
+        }
+    }
+
+
+    &__gift {
+        @media (min-width: $tablet-width) {
+            order: 3;
+
+        }
+    }
+
+    &__gift::before {
+        content: url("../img/icon-gift.svg");
+        position: absolute;
+        width: 32px;
+        height: 38px;
+
+        top: 0;
+        left: 25px;
+        transform: translateY(-25%);
+        @media (min-width: $tablet-width) {
+            left: 0;
+            width: 64px;
+            height: 75px;
+            transform: translate3d(160%, 65%, 0);
+        }
+        @media (min-width: $desktop-width) {
+            left: 0;
+            width: 64px;
+            height: 75px;
+            transform: translate3d(263%, 65%, 0);
+        }
+
+    }
+
+    &__text {
+        line-height: 21px;
+    }
+
+}

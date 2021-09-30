@@ -1,0 +1,63 @@
+// Файл обнуляющих стилей
+@import "_nullstyle";
+
+// Vars
+@import "_vars";
+
+// Шрифты
+@import "_fonts";
+
+// Visually hidden
+@import "_vhidden";
+
+// Header
+@import "_header";
+
+
+body {
+    font-family: "PT Sans", sans-serif;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      max-width: 768px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1200px;
+    }
+}
+
+// Button
+.button {
+    background-color: #81b3d2;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    color: #ffffff;
+    padding: 0 32px;
+
+    &:focus,
+    &:hover {
+      background-color: #669EC0;
+    }
+
+    &:active {
+      background-color: #5496BD;
+      color: #ffffff30;
+    }
+
+    &-index {
+      padding-top: 14.5px;
+      padding-bottom: 17.5px;
+    }
+  }
+
+@import "./formpage/mainpage";
+
+@import "./formpage/footer";
+
+@import "./formpage/form";
